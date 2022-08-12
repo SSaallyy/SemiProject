@@ -25,7 +25,7 @@ public class OrderDetailDAO {
 			sql = "insert into customerorderdetail(ordernum,customerid,itemnum,";
 			sql+= "cartitemcount,carttotprice) ";
 			sql+= "values(?,?,?,?,?)";
-			
+			//여기에 셀렉트문을 써서 서블릿을 거치지 않게 해보기
 			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setInt(1, oddto.getOrderNum());
